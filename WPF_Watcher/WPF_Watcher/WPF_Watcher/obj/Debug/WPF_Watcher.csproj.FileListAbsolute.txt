@@ -12,3 +12,5 @@ E:\1GitHub\Repositories\WPF_Watcher\WPF_Watcher\WPF_Watcher\WPF_Watcher\obj\Debu
 E:\1GitHub\Repositories\WPF_Watcher\WPF_Watcher\WPF_Watcher\WPF_Watcher\obj\Debug\WPF_Watcher.csproj.GenerateResource.cache
 E:\1GitHub\Repositories\WPF_Watcher\WPF_Watcher\WPF_Watcher\WPF_Watcher\obj\Debug\WPF_Watcher.exe
 E:\1GitHub\Repositories\WPF_Watcher\WPF_Watcher\WPF_Watcher\WPF_Watcher\obj\Debug\WPF_Watcher.pdb
+E:\1GitHub\Repositories\WPF_Watcher\WPF_Watcher\WPF_Watcher\WPF_Watcher\obj\Debug\App.baml
+E:\1GitHub\Repositories\WPF_Watcher\WPF_Watcher\WPF_Watcher\WPF_Watcher\obj\Debug\Resources\Dictionary1.baml

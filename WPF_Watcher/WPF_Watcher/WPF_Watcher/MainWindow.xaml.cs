@@ -153,18 +153,44 @@ namespace WPF_Watcher
         /// <param name="e"></param>
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            Display.Items.Add("Start watching\n");
-            FileRoad = $@"{FileWay.Text}";
+            try
+            {
+                FileRoad = $@"{FileWay.Text}";
 
-            watcher = new FileSystemWatcher(FileRoad, "*.*");
+                watcher = new FileSystemWatcher(FileRoad, "*.*");
+                
+                Display.Items.Add("Start watching");
 
-            watcher.EnableRaisingEvents = true;
-            watcher.IncludeSubdirectories = true;
+                watcher.EnableRaisingEvents = true;
+                watcher.IncludeSubdirectories = true;
 
-            watcher.Created += new FileSystemEventHandler(OnCreated);
-            watcher.Changed += new FileSystemEventHandler(OnChanged);
-            watcher.Renamed += new RenamedEventHandler(OnRenamed);
-            watcher.Deleted += new FileSystemEventHandler(OnDeleted);
+                watcher.Created += new FileSystemEventHandler(OnCreated);
+                watcher.Changed += new FileSystemEventHandler(OnChanged);
+                watcher.Renamed += new RenamedEventHandler(OnRenamed);
+                watcher.Deleted += new FileSystemEventHandler(OnDeleted);
+            }
+            catch
+            {
+                Display.Items.Add("Oops, something gone wrong, check the file path and try again!");
+            }
+        }
+
+        private void Stop_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                watcher.Dispose();
+                Display.Items.Add("Stop watching");
+            }
+            catch
+            {
+                Display.Items.Add("You are not watching on directory! Try to put file path ant press start!");
+            }
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            Display.Items.Clear();
         }
     }
 }
